@@ -1,3 +1,9 @@
+---
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
 # ria-genetic-susceptibility-phenotypes
 
 This repository contains the analysis code and computational workflow accompanying:
@@ -5,27 +11,29 @@ This repository contains the analysis code and computational workflow accompanyi
 **[Full publication title]**
 
 **Authors:** [Authors]
+
 **Journal:** [Journal]
+
 **DOI:** [DOI, if available]
 
----
+------------------------------------------------------------------------
 
 ## Overview
 
 This repository contains the code used for data processing, descriptive analyses, statistical modelling, and computational analyses reported in the publication.
 The repository is intended to support **transparency, reproducibility, and reuse of the analytical workflow**.
-Patient-level study data are not included in this repository due to data protection and/or data-sharing restrictions. 
+Patient-level study data are not included in this repository due to data protection and/or data-sharing restrictions.
 A synthetic dataset is provided to illustrate the structure of the analysis data and to facilitate testing of the analysis code.
 
----
+------------------------------------------------------------------------
 
 ## Repository structure
 
-```text
+``` text
 .
 ├── R/
 │   ├── functions/
-│   │   └── Reusable analysis and plotting functions
+│   │   └── 00_functions.R
 │   │
 │   └── scripts/
 │       ├── 01_descriptives.R
@@ -40,6 +48,7 @@ A synthetic dataset is provided to illustrate the structure of the analysis data
 │   │   └── 02_RIA_me_nonFins.R
 │   ├── load_env.sh
 │   ├── submit.sh
+│   ├── renv.lock
 │   └── README.md
 │
 ├── data/
@@ -51,7 +60,6 @@ A synthetic dataset is provided to illustrate the structure of the analysis data
 ├── tables/           # generated locally; not tracked by Git
 │
 │
-├── renv/
 ├── renv.lock
 ├── .gitignore
 └── README.md
@@ -61,8 +69,8 @@ A synthetic dataset is provided to illustrate the structure of the analysis data
 
 Contains the R code used for the analyses.
 
-* `functions/` contains reusable functions for data processing, statistical modelling, and visualisation.
-* `analysis/` contains the analysis scripts executed for the publication.
+-   `functions/` contains reusable functions for data processing, statistical modelling, and visualisation.
+-   `analysis/` contains the analysis scripts executed for the publication.
 
 ### `hpc/`
 
@@ -76,19 +84,20 @@ The synthetic data **do not contain patient-level information** and cannot be us
 
 ### `figures/` and `tables/`
 
-Figures and tables generated during the analysis are intentionally **not tracked in this repository**. They can be regenerated locally from the analysis scripts.
+Figures and tables generated during the analysis are intentionally **not tracked in this repository**.
+They can be regenerated locally from the analysis scripts.
 
----
+------------------------------------------------------------------------
 
 ## Software environment
 
 The analyses were conducted in **R**.
 
-Package versions are managed using [`renv`](https://rstudio.github.io/renv/). 
+Package versions are managed using [`renv`](https://rstudio.github.io/renv/).
 The `renv.lock` file records the R package versions used for the analysis.
 To initialise the project environment after cloning the repository:
 
-```r
+``` r
 install.packages("renv")
 renv::restore()
 ```
@@ -96,16 +105,17 @@ renv::restore()
 This installs the package versions recorded in `renv.lock`.
 To inspect the current project environment:
 
-```r
+``` r
 renv::status()
 ```
----
+
+------------------------------------------------------------------------
 
 ## Reproducing the analyses
 
 ### 1. Clone the repository
 
-```bash
+``` bash
 git clone [REPOSITORY-URL]
 cd [REPOSITORY-NAME]
 ```
@@ -114,7 +124,7 @@ cd [REPOSITORY-NAME]
 
 Open:
 
-```text
+``` text
 [REPOSITORY-NAME].Rproj
 ```
 
@@ -122,7 +132,7 @@ in RStudio.
 
 ### 3. Restore the R environment
 
-```r
+``` r
 renv::restore()
 ```
 
@@ -130,7 +140,7 @@ renv::restore()
 
 The analysis scripts are located in:
 
-```text
+``` text
 R/scripts/
 ```
 
@@ -138,7 +148,7 @@ and are intended to be executed in the indicated order.
 The scripts use the study analysis data, which are not distributed with this repository.
 The synthetic dataset can be used to inspect and test the analysis workflow where applicable.
 
----
+------------------------------------------------------------------------
 
 ## High-performance computing
 
@@ -146,25 +156,28 @@ Computationally intensive analyses were performed using a high-performance compu
 
 The corresponding scripts are located in:
 
-```text
+``` text
 hpc/
 ```
 
+The hpc/ directory contains template scripts used for the original HPC execution environment.
+These scripts illustrate the computational workflow but may require adaptation to local infrastructure.
+
 The main submission script is:
 
-```text
+``` text
 hpc/submit.sh
 ```
 
 HPC-specific instructions are provided in:
 
-```text
+``` text
 hpc/README.md
 ```
 
 The HPC workflow may require adaptation of paths, resource requests, environment modules, or scheduler settings to the local computing infrastructure.
 
----
+------------------------------------------------------------------------
 
 ## Data availability
 
@@ -172,7 +185,7 @@ The underlying study data are not publicly available because they contain sensit
 The synthetic dataset included in this repository is provided solely for demonstration and testing purposes.
 It does not contain real patient-level observations and cannot be used to reproduce the numerical results reported in the publication.
 
----
+------------------------------------------------------------------------
 
 ## Citation
 
@@ -180,12 +193,10 @@ If you use this repository or its code, please cite:
 
 > [Full citation of the publication]
 
----
+------------------------------------------------------------------------
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
 Copyright (c) [YEAR] [AUTHOR / COPYRIGHT HOLDER]
-
-
-
