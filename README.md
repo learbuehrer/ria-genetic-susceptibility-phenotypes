@@ -96,13 +96,21 @@ Contains scripts required to run computationally intensive analyses on the high-
 
 ### `data/synthetic/`
 
-Contains a synthetic dataset with the same general structure as the analysis data. The synthetic data **do not contain patient-level information** and cannot be used to reproduce the reported results.
+Ia a synthetic dataset generated from the original study data using the R package `synthpop`.
+
+The synthetic dataset preserves the overall structure and statistical characteristics of the original dataset while containing no real study participants.
+
+The dataset is provided solely to:
+
+-   demonstrate the analytical workflow,
+-   enable execution of the code,
+-   facilitate reproducibility of the computational analyses.
+
+The synthetic dataset should **not** be used for scientific inference or interpretation of effect estimates.
 
 ### `figures/` and `tables/`
 
-Figures and tables generated during the analysis are intentionally **not tracked in this repository**. They can be regenerated locally from the analysis scripts.
-
-------------------------------------------------------------------------
+Figures and tables generated during the analysis are intentionally not tracked in this repository. They can be regenerated locally from the analysis scripts.
 
 ## Software environment
 
