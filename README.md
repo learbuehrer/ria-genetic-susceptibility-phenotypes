@@ -14,7 +14,10 @@ This repository contains the analysis code and computational workflow accompanyi
 
 ## Overview
 
-This repository contains the code used for data processing, descriptive analyses, statistical modelling, and computational analyses reported in the publication. The repository is intended to support **transparency, reproducibility, and reuse of the analytical workflow**. Patient-level study data are not included in this repository due to data protection and/or data-sharing restrictions. A synthetic dataset is provided to illustrate the structure of the analysis data and to facilitate testing of the analysis code.
+This repository contains the code used for data preparation, descriptive analyses, mixed-effects regression modelling, sensitivity analyses, and additive Bayesian network (ABN) modelling investigating the association between genetic susceptibility and phenotypic characteristics of ruptured intracranial aneurysms (RIA). The repository is intended to support **transparency, reproducibility, and reuse of the analytical workflow**.
+
+As the original study dataset contains sensitive patient-level information, it cannot be publicly distributed. Instead, a synthetic dataset generated using the `synthpop` package is provided to demonstrate the structure of the data and enable execution of the analysis scripts.
+
 
 ------------------------------------------------------------------------
 
