@@ -133,7 +133,7 @@ renv::status()
 
 ## High-performance computing
 
-Computationally intensive analyses were performed using a high-performance computing environment.
+Computationally intensive analyses, including additive Bayesian network estimation using Markov Chain Monte Carlo (MCMC) methods, were executed on a high-performance computing environment.
 
 The corresponding scripts are located in:
 
@@ -141,21 +141,18 @@ The corresponding scripts are located in:
 hpc/
 ```
 
-The hpc/ directory contains template scripts used for the original HPC execution environment. These scripts illustrate the computational workflow but may require adaptation to local infrastructure.
+These scripts reflect the original computational workflow and may require adaptation to local computing infrastructure, including:
 
-The main submission script is:
+-   file paths
+-   scheduler settings
+-   resource allocation
+-   environment modules
 
-``` text
-hpc/submit.sh
-```
-
-HPC-specific instructions are provided in:
+Additional information is provided in:
 
 ``` text
 hpc/README.md
 ```
-
-The HPC workflow may require adaptation of paths, resource requests, environment modules, or scheduler settings to the local computing infrastructure.
 
 ------------------------------------------------------------------------
 
