@@ -2,7 +2,7 @@
 
 This repository contains the analysis code and computational workflow accompanying:
 
-**[Full publication title]**
+**Conditional Phenotypic Relationships of Genetic Susceptibility in Ruptured Intracranial Aneurysm: Evidence from Mixed-Effects Regression and Additive Bayesian Networks**
 
 **Authors:** [Authors]
 
