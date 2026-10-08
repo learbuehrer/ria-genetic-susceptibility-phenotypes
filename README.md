@@ -18,6 +18,30 @@ This repository contains the code used for data preparation, descriptive analyse
 
 As the original study dataset contains sensitive patient-level information, it cannot be publicly distributed. Instead, a synthetic dataset generated using the `synthpop` package is provided to demonstrate the structure of the data and enable execution of the analysis scripts.
 
+------------------------------------------------------------------------
+
+## Quick Start
+
+After cloning the repository, open the R project and restore the package environment using `renv`:
+
+```         
+git clone https://github.com/learbuehrer/ria-genetic-susceptibility-phenotypes.git
+cd ria-genetic-susceptibility-phenotypes
+
+install.packages("renv") 
+renv::restore()`
+```
+
+Run the analysis scripts in the following order:
+
+```         
+R/scripts/
+
+00_setup.R
+01_descriptive_statistics.R
+02_primary_regression_analyses.R
+03_sensitivity_analyses.R
+```
 
 ------------------------------------------------------------------------
 
@@ -95,43 +119,6 @@ This installs the package versions recorded in `renv.lock`. To inspect the curre
 ``` r
 renv::status()
 ```
-
-------------------------------------------------------------------------
-
-## Reproducing the analyses
-
-### 1. Clone the repository
-
-``` bash
-git clone [REPOSITORY-URL]
-cd [REPOSITORY-NAME]
-```
-
-### 2. Open the R project
-
-Open:
-
-``` text
-[REPOSITORY-NAME].Rproj
-```
-
-in RStudio.
-
-### 3. Restore the R environment
-
-``` r
-renv::restore()
-```
-
-### 4. Run the analyses
-
-The analysis scripts are located in:
-
-``` text
-R/scripts/
-```
-
-and are intended to be executed in the indicated order. The scripts use the study analysis data, which are not distributed with this repository. The synthetic dataset can be used to inspect and test the analysis workflow where applicable.
 
 ------------------------------------------------------------------------
 
