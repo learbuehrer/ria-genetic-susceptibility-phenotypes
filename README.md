@@ -22,26 +22,35 @@ As the original study dataset contains sensitive patient-level information, it c
 
 ## Quick Start
 
-After cloning the repository, open the R project and restore the package environment using `renv`:
+Cloning the repository:
 
-```         
+``` bash
 git clone https://github.com/learbuehrer/ria-genetic-susceptibility-phenotypes.git
 cd ria-genetic-susceptibility-phenotypes
-
-install.packages("renv") 
-renv::restore()`
 ```
 
-Run the analysis scripts in the following order:
+Choose the workflow of interest:
 
-```         
-R/scripts/
+-   Local analyses: run the scripts in `R/scripts/`:\
+    Restore the R environment:
 
-00_setup.R
-01_descriptive_statistics.R
-02_primary_regression_analyses.R
-03_sensitivity_analyses.R
-```
+    ``` r
+    install.packages("renv") 
+    renv::restore()`
+    ```
+
+    Run the analysis scripts in the following order:
+
+    ``` r
+    R/scripts/
+
+    00_setup.R
+    01_descriptive_statistics.R
+    02_primary_regression_analyses.R
+    03_sensitivity_analyses.R
+    ```
+
+-   HPC analyses (ABN/MCMC): see `hpc/README.md`
 
 ------------------------------------------------------------------------
 
