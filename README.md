@@ -51,15 +51,16 @@ R/scripts/
 .
 ├── R/
 │   ├── functions/
-│   │   └── 00_functions.R
+│   │   └── A_functions.R
 │   └── scripts/
+│       ├── 00_setup.R
 │       ├── 01_descriptives.R
 │       ├── 02_regressions.R
 │       └── 03_sensitivity.R
 │
 ├── hpc/
 │   ├── functions/
-│   │   └── 00_mcmc_functions.R
+│   │   └── B_mcmc_functions.R
 │   ├── scripts/
 │       ├── 01_RIA_me.R       
 │   │   └── 02_RIA_me_nonFins.R
