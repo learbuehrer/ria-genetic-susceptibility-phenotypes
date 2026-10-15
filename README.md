@@ -87,9 +87,13 @@ Choose the workflow of interest:
 ├── tables/           # generated locally; not tracked by Git
 │
 │
-├── renv.lock
+├── .Rprofile
 ├── .gitignore
-└── README.md
+├── .renvignore
+├── LICENSE
+├── README.md
+├── renv.lock
+└── ria-genetic-susceptibility-phenotypes.Rproj
 ```
 
 ### `R/`
