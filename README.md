@@ -36,18 +36,18 @@ Choose the workflow of interest:
 
     ``` r
     install.packages("renv") 
-    renv::restore()`
+    renv::restore()
     ```
 
     Run the analysis scripts in the following order:
 
-    ``` r
+    ``` text
     R/scripts/
 
     00_setup.R
-    01_descriptive_statistics.R
-    02_primary_regression_analyses.R
-    03_sensitivity_analyses.R
+    01_descriptives.R
+    02_regressions.R
+    03_sensitivity.R
     ```
 
 -   HPC analyses (ABN/MCMC): see `hpc/README.md`
