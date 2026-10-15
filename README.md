@@ -71,8 +71,7 @@ Choose the workflow of interest:
 │   ├── functions/
 │   │   └── B_mcmc_functions.R
 │   ├── scripts/
-│       ├── 01_RIA_me.R       
-│   │   └── 02_RIA_me_nonFins.R
+│   │   └── 01_RIA_me.R       
 │   ├── load_env.sh
 │   ├── submit.sh
 │   ├── renv.lock
@@ -80,8 +79,7 @@ Choose the workflow of interest:
 │
 ├── data/
 │   └── synthetic/
-│       ├── synthetic_data.rds
-│       └── README.md
+│       └─── synthetic_data.rds
 │
 ├── figures/          # generated locally; not tracked by Git
 ├── tables/           # generated locally; not tracked by Git
