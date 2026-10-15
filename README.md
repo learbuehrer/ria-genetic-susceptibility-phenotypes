@@ -8,7 +8,7 @@ This repository contains the analysis code and computational workflow accompanyi
 
 **Journal:** [Journal]
 
-**DOI:** [DOI, if available]
+**DOI:** [DOI]
 
 ------------------------------------------------------------------------
 
