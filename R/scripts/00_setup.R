@@ -10,7 +10,7 @@
 #   1. Load required R packages
 #   2. Define color palettes
 #   3. Load project-specific helper functions
-#   4. Load the synthetic study data set
+#   4. Load the synthetic study dataset
 #
 # Input:
 #   - data/synthetic/synthetic_data.rds
@@ -18,7 +18,7 @@
 #
 # Output:
 #   - Analysis environment
-#   - dat_s object containing the synthetic data set
+#   - dat_s object containing the synthetic dataset
 #
 # Notes:
 #   - The repository contains synthetic data generated from the original
@@ -94,9 +94,9 @@ sourceColorPalette <- c(
 source("R/functions/A_functions.R")
 
 ###############################################################################-
-# Synthetic Study Data set ####
+# Synthetic Study Dataset ####
 #
-# The data set contains synthetic participant-level observations that
+# The dataset contains synthetic participant-level observations that
 # preserve the overall structure and statistical properties of the
 # original study data while containing no real participants.
 ###############################################################################-
@@ -104,11 +104,11 @@ source("R/functions/A_functions.R")
 dat_s <- readRDS("data/synthetic/synthetic_data.rds")
 
 ###############################################################################-
-# Quick Data set Overview
+# Quick Dataset Overview
 ###############################################################################-
 
 message(
-  "Loaded synthetic data set with ",
+  "Loaded synthetic dataset with ",
   nrow(dat_s),
   " observations and ",
   ncol(dat_s),
