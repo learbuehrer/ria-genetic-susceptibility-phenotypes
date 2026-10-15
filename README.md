@@ -105,7 +105,7 @@ Contains scripts required to run computationally intensive analyses on the high-
 
 ### `data/synthetic/`
 
-Ia a synthetic dataset generated from the original study data using the R package `synthpop`.
+A synthetic data set generated from the original study data using the R package `synthpop` (n = 2000).
 
 The synthetic dataset preserves the overall structure and statistical characteristics of the original dataset while containing no real study participants.
 
