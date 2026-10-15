@@ -5,9 +5,7 @@
 .Ruserdata
 
 # renv
-renv/library/
-renv/staging/
-renv/cache/
+renv
 
 # OS
 .DS_Store
