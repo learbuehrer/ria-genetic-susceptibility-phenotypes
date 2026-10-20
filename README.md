@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------
 
 > [!IMPORTANT]
-> **Data temporarily withheld**
+> **Data temporarily withheld:**
 > The analysis code in this repository is fully public, but the underlying research data are currently withheld because the associated manuscript has not yet been published. To avoid conflicts with the publication process, no simulated study data are distributed at this time. Simulated data will be added following publication.
 
 ------------------------------------------------------------------------
