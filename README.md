@@ -1,5 +1,13 @@
 # ria-genetic-susceptibility-phenotypes
 
+------------------------------------------------------------------------
+
+> [!IMPORTANT] **⚠️ Data temporarily withheld**
+>
+> The analysis code in this repository is fully public, but the underlying research data are currently withheld because the associated manuscript has not yet been published. To avoid conflicts with the publication process, no simulated study data are distributed at this time. Simulated data will be added following publication.
+
+------------------------------------------------------------------------
+
 This repository contains the analysis code and computational workflow accompanying:
 
 **Conditional Phenotypic Relationships of Genetic Susceptibility in Ruptured Intracranial Aneurysm: Evidence from Mixed-Effects Regression and Additive Bayesian Networks**
