@@ -163,7 +163,7 @@ dists <- list(
 
 # banmatrix:
 keep <- keep[keep != "Source"] # remove Source from ban matrix
-allowmat <- readxl::read_excel("data/Banmatrix_ISGC_genetic_scores.xlsx",
+allowmat <- readxl::read_excel("data/synthetic/priors.xlsx",
                                sheet="allowmatrix_RIA") %>% 
   tibble::column_to_rownames('ChildParent') %>%
   as.matrix() 
@@ -177,7 +177,7 @@ banmat <- banmat[c(keep),
 
 
 # retainmatrix
-retainmat <- readxl::read_excel("data/synthetic/Banmatrix_ISGC_genetic_scores.xlsx",
+retainmat <- readxl::read_excel("data/synthetic/priors.xlsx",
                                 sheet="retainmatrix_RIA") %>% 
   tibble::column_to_rownames('ChildParent') %>%
   as.matrix() 
