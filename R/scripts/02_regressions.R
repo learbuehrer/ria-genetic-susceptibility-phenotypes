@@ -147,6 +147,8 @@ f
 #   units = "mm",
 #   device = cairo_pdf)
 
+
+# model diagnostics
 size_diagnostics <- diagnose_pipeline(size_results_prs)
 size_diagnostics$table
 
