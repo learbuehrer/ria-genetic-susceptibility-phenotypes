@@ -16,6 +16,8 @@ Users should review and adapt:
 -   paths to R installations
 -   resource requests (CPU, memory, runtime)
 -   scheduler-specific directives
+-   exact model formulation (in `hpc/scripts`)
+-   seeds and MCMC settings (in `hpc/submit.sh`)
 
 Original analysis environment used for the publication:
 
