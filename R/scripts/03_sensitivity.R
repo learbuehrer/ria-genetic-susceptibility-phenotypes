@@ -602,7 +602,7 @@ multi_source$plot
 
 # Note:
 # Source-specific logistic models showed convergence issues for GERFHS
-# and Oxford, likely due to limited event counts within these cohorts.
+# and Oxford in the synthetic data set, likely due to limited event counts within these cohorts.
 
 ##### IA location ####
 location_source <- plot_source_specific(
@@ -617,5 +617,5 @@ location_source <- plot_source_specific(
 
 location_source$plot
 # Note:
-# Source-specific logistic models showed convergence issues for GERFHS,
-# likely due to limited event counts within these cohorts.
+# Source-specific logistic models showed convergence issues for GERFHS in the
+# synthetic data set, likely due to limited event counts within these cohorts.
