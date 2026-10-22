@@ -181,12 +181,13 @@ continuous_plot_data <-
   select(
     Source,
     AgeAtRupture = Age.at.time.of.SAH,
-    IASize = IA_size.at.time.of.SAH.log
+    IASize = IA_size.at.time.of.SAH
   ) %>%
   pivot_longer(
     -Source,
     names_to = "Variable",
-    values_to = "Value") %>%
+    values_to = "Value"
+  ) %>%
   filter(is.finite(Value))
 
 continuous_overall <-
@@ -296,17 +297,13 @@ p_binary <-
 # Continuous panel
 facet_x_labels <- data.frame(
   Variable = factor(
-    c(
-      "Age at Rupture",
-      "IA Size at Rupture"),
-    levels = c(
-      "Age at Rupture",
-      "IA Size at Rupture")),
-  x = c(55, 2.5),
+    c("Age at Rupture", "IA Size at Rupture"),
+    levels = c("Age at Rupture", "IA Size at Rupture")
+  ),
+  x = c(52.5, sqrt(1 * 30)),
   y = -Inf,
-  label = c(
-    "Years",
-    "log mm"))
+  label = c("years", "mm")
+)
 
 p_continuous <-
   ggplot(
@@ -314,56 +311,75 @@ p_continuous <-
     aes(
       x = Value,
       y = Source,
-      fill = Source)) +
+      fill = Source
+    )
+  ) +
   geom_vline(
     data = continuous_overall,
     aes(xintercept = Overall),
     colour = "#4D4D4D",
     linewidth = 0.6,
-    linetype = "dashed") +
+    linetype = "dashed"
+  ) +
   geom_boxplot(
     width = 0.55,
     linewidth = 0.6,
     outlier.size = 1.2,
-    outlier.alpha = 0.7) +
+    outlier.alpha = 0.7
+  ) +
   facet_grid(
     ~Variable,
     scales = "free_x",
-    axes = "all") +
+    axes = "all"
+  ) +
   scale_fill_manual(
     values = sourceColorPalette,
-    guide = "none") +
-  scale_colour_manual(
-    values = sourceColorPalette,
-    guide = "none") +
+    guide = "none"
+  ) +
   ggh4x::facetted_pos_scales(
     x = list(
       scale_x_continuous(
         limits = c(10, 95),
-        breaks = seq(10, 95, by = 20),
-        expand = c(0, 0)),
-      scale_x_continuous(
-        limits = c(-1, 5),
-        breaks = seq(-1, 5, by = 1),
-        expand = c(0, 0)))) +
+        breaks = seq(10, 90, by = 20),
+        expand = c(0, 0)
+      ),
+      scale_x_log10(
+        limits = c(0.75, 30),
+        breaks = c(1, 2,  5, 10, 20),
+        minor_breaks = NULL,
+        expand = c(0, 0)
+      )
+    )
+  ) +
   geom_text(
     data = facet_x_labels,
     aes(
       x = x,
       y = y,
-      label = label),
+      label = label
+    ),
     inherit.aes = FALSE,
     fontface = "bold",
     size = 3.5,
-    vjust = 4) +
-  coord_cartesian(
-    clip = "off") +
+    hjust = 0.5,
+    vjust = 4
+  ) +
+  coord_cartesian(clip = "off") +
   labs(
     x = NULL,
-    y = NULL) +
+    y = NULL
+  ) +
   theme_sources +
   theme(
-    axis.ticks.y = element_blank())
+    axis.ticks.y = element_blank(),
+    plot.margin = margin(
+      t = 5.5,
+      r = 5.5,
+      b = 25,
+      l = 5.5
+    )
+  )
+
 
 # Combine panels
 p_combined <- patchwork::wrap_plots(
